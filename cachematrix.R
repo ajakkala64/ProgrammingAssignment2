@@ -54,7 +54,9 @@ cacheSolve <- function(x, ...) {
    message(' Matrix does not exist in cache, create a new and storing in cache')
    ## create new matrix
    matrix <- x$get()
+   ## use solve function to create inverse matrix
    cache <- solve(matrix, ...)
+   ## save inverse matrix
    x$setMatrix(cache)
    return(cache)
 }
